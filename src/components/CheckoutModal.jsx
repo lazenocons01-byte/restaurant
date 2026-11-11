@@ -205,33 +205,11 @@ export default function CheckoutModal() {
       {showConfetti && <Confetti count={75} />}
 
       <div
-        className="modal-overlay open"
-        style={{
-          position: 'fixed',
-          inset: 0,
-          background: 'rgba(10,10,20,0.72)',
-          zIndex: 500,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: 20,
-          backdropFilter: 'blur(5px)',
-        }}
+        className="modal-overlay checkout-modal-overlay open"
         onClick={handleClose}
       >
         <div
-          className="modal"
-          style={{
-            background: '#fff',
-            borderRadius: 22,
-            maxWidth: 620,
-            width: '100%',
-            maxHeight: '92vh',
-            overflowY: 'auto',
-            position: 'relative',
-            padding: '36px 32px',
-            boxShadow: '0 30px 80px rgba(0,0,0,0.3)',
-          }}
+          className="modal checkout-modal-card"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}

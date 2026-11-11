@@ -62,33 +62,11 @@ export default function DishDetailModal({ item, onClose, onAddAnimated }) {
 
   return (
     <div
-      className="modal-overlay open"
-      style={{
-        position: 'fixed',
-        inset: 0,
-        backgroundColor: 'rgba(10, 10, 20, 0.75)',
-        zIndex: 600,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '20px',
-        backdropFilter: 'blur(6px)',
-      }}
+      className="modal-overlay dish-modal-overlay open"
       onClick={onClose}
     >
       <div
-        className="modal"
-        style={{
-          background: '#fff',
-          borderRadius: 24,
-          maxWidth: 640,
-          width: '100%',
-          maxHeight: '92vh',
-          overflowY: 'auto',
-          position: 'relative',
-          padding: 0,
-          boxShadow: '0 30px 80px rgba(0,0,0,0.35)',
-        }}
+        className="modal dish-modal-card"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -96,28 +74,13 @@ export default function DishDetailModal({ item, onClose, onAddAnimated }) {
           type="button"
           onClick={onClose}
           aria-label="Close dish modal"
-          style={{
-            position: 'absolute',
-            top: 16,
-            right: 16,
-            width: 38,
-            height: 38,
-            borderRadius: '50%',
-            background: 'rgba(255, 255, 255, 0.9)',
-            border: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            zIndex: 10,
-            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-          }}
+          className="dish-modal-close"
         >
           <X size={20} />
         </button>
 
         {/* Hero Image Header */}
-        <div style={{ position: 'relative', width: '100%', height: 260, overflow: 'hidden' }}>
+        <div className="dish-modal-img-wrap">
           <img
             src={item.image}
             alt={item.name}
@@ -207,7 +170,7 @@ export default function DishDetailModal({ item, onClose, onAddAnimated }) {
         </div>
 
         {/* Modal Body */}
-        <div style={{ padding: '24px 28px 30px' }}>
+        <div className="dish-modal-body">
           {/* Metadata chips: Prep time, calories, ratings */}
           <div
             style={{
@@ -440,15 +403,7 @@ export default function DishDetailModal({ item, onClose, onAddAnimated }) {
           </div>
 
           {/* Action Row: Quantity + Add to Order */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 16,
-              paddingTop: 16,
-              borderTop: '1px solid #eee',
-            }}
-          >
+          <div className="dish-modal-footer">
             {/* Quantity Stepper */}
             <div
               style={{

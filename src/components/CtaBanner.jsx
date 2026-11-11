@@ -39,8 +39,8 @@ export default function CtaBanner() {
             >
               <Utensils size={18} /> Order Online Now
             </button>
-            <a href="tel:+15551234567" className="btn btn-outline-white btn-lg">
-              <Phone size={18} /> Call to Order: +1 (555) 123-4567
+            <a href="tel:+919876543210" className="btn btn-outline-white btn-lg">
+              <Phone size={18} /> Call to Order: +91 98765 43210
             </a>
           </div>
 

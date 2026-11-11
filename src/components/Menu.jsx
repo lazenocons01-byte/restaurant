@@ -82,53 +82,18 @@ export default function Menu() {
           </p>
 
           {/* Dine-In vs Delivery Switcher */}
-          <div
-            style={{
-              display: 'inline-flex',
-              background: '#f0f5f2',
-              padding: 4,
-              borderRadius: 30,
-              marginTop: 18,
-              border: '1.5px solid #dbe9e0',
-            }}
-          >
+          <div className="order-mode-switcher">
             <button
               type="button"
+              className={`order-mode-btn ${orderMode === 'delivery' ? 'active' : ''}`}
               onClick={() => setOrderMode('delivery')}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 7,
-                padding: '8px 20px',
-                borderRadius: 24,
-                border: 'none',
-                background: orderMode === 'delivery' ? '#2d7a4f' : 'transparent',
-                color: orderMode === 'delivery' ? '#fff' : '#444',
-                fontWeight: 600,
-                fontSize: '0.86rem',
-                cursor: 'pointer',
-                transition: 'all 0.25s ease',
-              }}
             >
               <Bike size={16} /> Doorstep Delivery
             </button>
             <button
               type="button"
+              className={`order-mode-btn ${orderMode === 'dinein' ? 'active' : ''}`}
               onClick={() => setOrderMode('dinein')}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 7,
-                padding: '8px 20px',
-                borderRadius: 24,
-                border: 'none',
-                background: orderMode === 'dinein' ? '#2d7a4f' : 'transparent',
-                color: orderMode === 'dinein' ? '#fff' : '#444',
-                fontWeight: 600,
-                fontSize: '0.86rem',
-                cursor: 'pointer',
-                transition: 'all 0.25s ease',
-              }}
             >
               <UtensilsCrossed size={16} /> Dine-In Order to Table
             </button>
@@ -136,71 +101,26 @@ export default function Menu() {
         </div>
 
         {/* Search & Filter Bar */}
-        <div
-          style={{
-            maxWidth: 680,
-            margin: '0 auto 28px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 14,
-          }}
-        >
-          <div style={{ position: 'relative', width: '100%' }}>
+        <div className="menu-filter-container">
+          <div className="menu-search-wrap">
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search dishes (e.g., Truffle, Carbonara, Sea Bass, Burrata, Tiramisù)..."
-              style={{
-                width: '100%',
-                padding: '13px 44px 13px 20px',
-                borderRadius: 50,
-                border: '1.5px solid #e0e0e0',
-                fontSize: '0.92rem',
-                outline: 'none',
-                background: '#fff',
-                boxShadow: '0 4px 15px rgba(0,0,0,0.04)',
-                boxSizing: 'border-box',
-              }}
+              placeholder="Search dishes (e.g., Truffle, Carbonara, Sea Bass, Burrata)..."
+              className="menu-search-input"
             />
-            <Search
-              size={18}
-              style={{
-                position: 'absolute',
-                right: 18,
-                top: '50%',
-                transform: 'translateY(-50%)',
-                color: '#888',
-                pointerEvents: 'none',
-              }}
-            />
+            <Search size={18} className="menu-search-icon" />
           </div>
 
           {/* Quick Dietary Tags */}
-          <div
-            style={{
-              display: 'flex',
-              gap: 8,
-              justifyContent: 'center',
-              flexWrap: 'wrap',
-            }}
-          >
+          <div className="dietary-tags-wrap">
             {allTags.map((tag) => (
               <button
                 key={tag}
                 type="button"
+                className={`dietary-tag-btn ${selectedTag === tag ? 'active' : ''}`}
                 onClick={() => setSelectedTag(tag)}
-                style={{
-                  padding: '6px 16px',
-                  borderRadius: 20,
-                  fontSize: '0.8rem',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  border: selectedTag === tag ? '1px solid #2d7a4f' : '1px solid #e0e0e0',
-                  background: selectedTag === tag ? '#2d7a4f' : '#fff',
-                  color: selectedTag === tag ? '#fff' : '#555',
-                  transition: 'all 0.2s ease',
-                }}
               >
                 {tag === 'all' ? 'All Dietary' : tag}
               </button>
