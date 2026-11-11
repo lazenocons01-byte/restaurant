@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://labellacucina.com/sitemap.xml
+

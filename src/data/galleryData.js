@@ -1,0 +1,61 @@
+export const galleryImages = [
+  {
+    id: 1,
+    src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80',
+    thumb: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80',
+    title: 'Main Dining Hall & Ambiance',
+    caption: 'Warm ambient lighting, vintage Italian chandeliers, and comfortable plush banquettes.',
+    className: 'g-large',
+  },
+  {
+    id: 2,
+    src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1000&q=80',
+    thumb: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80',
+    title: 'The Artisanal Cocktail & Wine Bar',
+    caption: 'Over 200 curated vintage Italian DOCG bottles and classic aperitivi.',
+  },
+  {
+    id: 3,
+    src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1000&q=80',
+    thumb: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80',
+    title: 'Handmade Pasta Station',
+    caption: 'Fresh pasta rolled and shaped by hand every single morning.',
+  },
+  {
+    id: 4,
+    src: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1000&q=80',
+    thumb: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80',
+    title: 'Burrata Caprese & Organic Greens',
+    caption: 'Imported pugliese burrata with heirloom tomatoes and fresh pressed basil oil.',
+  },
+  {
+    id: 5,
+    src: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1000&q=80',
+    thumb: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80',
+    title: 'Artisanal Dessert Creations',
+    caption: 'Tiramisù, panna cotta, and torta al limone prepared in-house.',
+    className: 'g-tall',
+  },
+  {
+    id: 6,
+    src: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1000&q=80',
+    thumb: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80',
+    title: 'Neapolitan Wood-Fired Oven',
+    caption: 'Authentic 900-degree stone oven fired exclusively with seasoned oak wood.',
+  },
+  {
+    id: 7,
+    src: 'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=1000&q=80',
+    thumb: 'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=400&q=80',
+    title: 'Black Truffle Risotto',
+    caption: 'Slow-simmered Carnaroli rice finished with Norcia black truffles and 24-month Parmigiano.',
+  },
+  {
+    id: 8,
+    src: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=1000&q=80',
+    thumb: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&q=80',
+    title: 'Grand Seafood Platter',
+    caption: 'Fresh lobster, Mediterranean king prawns, calamari, and line-caught wild sea bass.',
+  },
+];
+

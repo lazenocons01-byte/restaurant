@@ -1,0 +1,21 @@
+{
+  "name": "La Bella Cucina",
+  "short_name": "La Bella",
+  "description": "Fine Italian Dining — Reserve your table or order online",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#2d7a4f",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "lifestyle"],
+  "lang": "en-US"
+}
+
